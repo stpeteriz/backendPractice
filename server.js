@@ -27,9 +27,7 @@ const app = express();
 app.use(express.json());
 app.use(cors({
     origin: 'frontendtesting-production.up.railway.app',
-    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
-    preflightContinue: false,
-    optionsSuccessStatus: 204
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE"
 }));
 
 app.get('/', (req,res) =>{
