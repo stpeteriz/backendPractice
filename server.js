@@ -25,7 +25,7 @@ db.select('*').from('users').then(data => {
 
 const app = express();
 app.use(express.json());
-app.use(cors('frontendtesting-production.up.railway.app',));
+app.use(cors('frontendtesting-production.up.railway.app'));
 
 app.get('/', (req,res) =>{
     res.json('It is running');
