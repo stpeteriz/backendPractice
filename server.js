@@ -26,7 +26,7 @@ db.select('*').from('users').then(data => {
 const app = express();
 app.use(express.json());
 app.use(cors({
-    origin: 'http://172.17.0.130:7332',
+    origin: 'https://frontendtesting-production.up.railway.app',
     methods: 'GET,PUT,POST,DELETE'
 }));
 
