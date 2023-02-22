@@ -25,7 +25,12 @@ db.select('*').from('users').then(data => {
 
 const app = express();
 app.use(express.json());
-app.use(cors({origin: 'frontendtesting-production.up.railway.app'}));
+app.use(cors({
+    origin: 'frontendtesting-production.up.railway.app',
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    preflightContinue: false,
+    optionsSuccessStatus: 204
+}));
 
 app.get('/', (req,res) =>{
     res.json('It is running');
